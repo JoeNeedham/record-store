@@ -12,7 +12,8 @@ const app = express()
 // import routes
 
 // database
-
+const connection = require("./db");
+connection()
 
 // middleware
 app.use(morgan('dev'));
