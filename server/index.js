@@ -10,6 +10,7 @@ const cors = require('cors')
 const app = express()
 
 // import routes
+const productRoutes = require('./routes/product');
 
 // database
 const connection = require("./db");
@@ -23,7 +24,7 @@ app.use(expressValidator());
 app.use(cors());
 
 // routes middleware
-
+app.use('/api', productRoutes);
 
 const port = process.env.PORT || 8001
 
