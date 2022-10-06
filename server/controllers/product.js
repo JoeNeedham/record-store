@@ -1,6 +1,5 @@
 const formidable = require("formidable");
 const connection = require("../db");
-let instance = null;
 
 
 exports.create = (req, res) => {
@@ -32,13 +31,13 @@ exports.create = (req, res) => {
             }
         }
 
-        // const query = "INSERT INTO product VALUES(name, description, price, quantity, photo)"
+        const query = "INSERT INTO product VALUES(name, description, price, quantity, photo)"
 
-        // db.query(query, function(err, result){
-        //     if(err){
-        //         console.log("Product create failed")
-        //     }
-        //     res.json(result)
-        // });
+        connection.query(query, function(err, result){
+            if(err){
+                console.log("Product create failed")
+            }
+            res.json(result)
+        });
     })
 };
