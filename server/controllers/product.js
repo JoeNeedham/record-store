@@ -1,7 +1,6 @@
 const formidable = require("formidable");
 const connection = require("../db");
 
-
 exports.create = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
@@ -31,9 +30,11 @@ exports.create = (req, res) => {
             }
         }
 
-        const query = "INSERT INTO product VALUES(name, description, price, quantity, photo)"
+        const query = "INSERT INTO books SET ?"
 
-        connection.query(query, function(err, result){
+        const post = {name: req.body.name, description: req.body.description, price: req.body.price, quantity: req.body.quantity, photo: req.body.photo};
+
+        connection.query(query, post, function(err, result){
             if(err){
                 console.log("Product create failed")
             }
