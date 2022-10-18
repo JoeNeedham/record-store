@@ -41,4 +41,6 @@ exports.create = (req, res) => {
             res.json(result)
         });
     })
+
+    // this is some bullshit fr
 };
