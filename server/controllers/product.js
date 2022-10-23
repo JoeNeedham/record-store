@@ -42,5 +42,5 @@ exports.create = (req, res) => {
         });
     })
 
-    // this is some bullshit fr
+    // study day
 };
