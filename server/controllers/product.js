@@ -42,5 +42,5 @@ exports.create = (req, res) => {
         });
     })
 
-    // study dayn 1
+    // study dayn 2
 };
