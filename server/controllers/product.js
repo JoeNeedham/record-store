@@ -42,5 +42,5 @@ exports.create = (req, res) => {
         });
     })
 
-    // algo
+    // group proj
 };
