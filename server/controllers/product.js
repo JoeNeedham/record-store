@@ -43,5 +43,5 @@ exports.create = (req, res) => {
     })
 
     // algo today 32
-    // project day 1
+    // project day 2
 };
